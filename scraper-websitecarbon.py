@@ -20,7 +20,7 @@ time.sleep(1)
 
 driver.find_element(By.ID, 'js-new-test-button').click()
 
-time.sleep(1)
+driver.implicitly_wait(6)
 
 text = driver.find_element(By.CLASS_NAME, "js-countup-content").text
 print(text)
