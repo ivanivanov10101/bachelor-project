@@ -7,6 +7,13 @@ site = "https://www.google.com/"
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get("https://www.websitecarbon.com/")
-time.sleep(10000)
+
+driver.maximize_window()
+
 driver.find_element_by_id('wgd-cc-url').send_keys(site)
-driver.find_element_by_id('wgd-cc-url').click()
+
+time.sleep(5)
+
+driver.find_element_by_id('js-new-test-button').click()
+
+time.sleep(10000);
