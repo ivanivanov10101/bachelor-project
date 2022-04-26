@@ -1,6 +1,5 @@
 import json
 import glob
-from datetime import datetime
 import csv
 
 data = []
@@ -30,7 +29,7 @@ for file in files:
 
 data.sort()
 
-data.insert(0, ['URL', 'Green', 'Bytes', 'Cleaner Than', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
+data.insert(0, ['URL', 'Green Hosting', 'Bytes', 'Cleaner Than %', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
 
 with open('database.csv', "w", newline="") as f:
     writer = csv.writer(f)
