@@ -36,7 +36,7 @@ async def main(urls, **kwargs):
 
 if __name__ == '__main__':
     urls = []
-    with open('final.csv', newline='') as inputfile:
+    with open('test_data.csv', newline='') as inputfile:
         for row in csv.reader(inputfile):
             urls.append(row[0])
     # Either take urls from stdin or make some default here

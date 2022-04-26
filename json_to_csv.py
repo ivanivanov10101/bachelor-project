@@ -27,7 +27,6 @@ for file in files:
     except KeyError:
       print(f'Skipping {file}')
 
-data.sort()
 
 data.insert(0, ['URL', 'Green Hosting', 'Bytes', 'Cleaner Than %', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
 
