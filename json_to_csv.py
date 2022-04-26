@@ -7,8 +7,8 @@ data = []
 
 files = glob.glob('json/*', recursive=True)
 
-for single_file in files:
-  with open(single_file, 'r') as f:
+for file in files:
+  with open(file, 'r') as f:
 
     try:
       json_file = json.load(f)
@@ -26,7 +26,7 @@ for single_file in files:
         json_file['timestamp']
       ])
     except KeyError:
-      print(f'Skipping {single_file}')
+      print(f'Skipping {file}')
 
 data.sort()
 
