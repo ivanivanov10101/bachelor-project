@@ -5,10 +5,10 @@ import json
 
 async def get(session: aiohttp.ClientSession, site: str):
     url = f"https://api.websitecarbon.com/site?url={site}/"
-    print(f"Requesting {url}")
+    print(f"Requesting: {url}")
     resp = await session.request('GET', url=url)
     data = await resp.json()
-    print(f"Received data for {url}")
+    print(f"Received: {url}")
     with open(f'json\\{site}.json', 'w+') as f:
         json.dump(data, f)
     return data
