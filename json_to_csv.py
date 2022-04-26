@@ -25,7 +25,7 @@ for file in files:
         json_file['timestamp']
       ])
     except KeyError:
-      print(f'Skipping {file}')
+      print(f'File {file} is empty. Skipping.')
 
 
 data.insert(0, ['URL', 'Green Hosting', 'Bytes', 'Cleaner Than %', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
