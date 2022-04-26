@@ -1,6 +1,7 @@
 import asyncio
 import aiohttp  # pip install aiohttp aiodns
 import csv
+import json
 
 async def get(
     session: aiohttp.ClientSession,
@@ -14,6 +15,8 @@ async def get(
     # You can either handle that here, or pass the exception through
     data = await resp.json()
     print(f"Received data for {url}")
+    with open(f'json\\{site}.json', 'w+') as f:
+        json.dump(data, f)
     return data
 
 
@@ -38,3 +41,4 @@ if __name__ == '__main__':
             urls.append(row[0])
     # Either take urls from stdin or make some default here
     asyncio.run(main(urls))  # Python 3.7+
+    
