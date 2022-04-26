@@ -40,5 +40,6 @@ if __name__ == '__main__':
         for row in csv.reader(inputfile):
             urls.append(row[0])
     # Either take urls from stdin or make some default here
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     asyncio.run(main(urls))  # Python 3.7+
     
