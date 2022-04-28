@@ -21,14 +21,12 @@ def parse(htmls):
                 code['statistics']['co2']['renewable']['litres'],
                 code['timestamp']
             ])
-        except KeyError:
-            print(f'File {file} is empty. Skipping.')
-        except ValueError:
-            continue
+        except (KeyError, aiohttp.ContentTypeError) as e:
+            print(f'File {file} is empty. Skipping.{e}')
 
     data.insert(0, ['URL', 'Green Hosting', 'Bytes', 'Cleaner Than %', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
 
-    with open('database.csv', "w", newline="") as f:
+    with open('database1.csv', "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerows(data)
 
@@ -38,7 +36,7 @@ async def get(throttler, session: aiohttp.ClientSession, site: str):
         url = f"https://api.websitecarbon.com/site?url={site}/"
         print(f"Requesting: {site}")
         resp = await session.request('GET', url=url)
-        data = await resp.json()
+        data = await resp.json(content_type='application/json')
         print(f"Received: {site}")
         with open(f'json\\{site}.json', 'w+') as f:
             json.dump(data, f)
