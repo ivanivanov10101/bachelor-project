@@ -26,7 +26,7 @@ def parse(htmls):
 
     data.insert(0, ['URL', 'Green Hosting', 'Bytes', 'Cleaner Than %', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
 
-    with open('database1.csv', "w", newline="") as f:
+    with open('database8000-8500.csv', "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerows(data)
 
@@ -38,14 +38,12 @@ async def get(throttler, session: aiohttp.ClientSession, site: str):
         resp = await session.request('GET', url=url)
         data = await resp.json(content_type='application/json')
         print(f"Received: {site}")
-        with open(f'json\\{site}.json', 'w+') as f:
-            json.dump(data, f)
         return data
 
 
 async def main(urls):
     tasks = []
-    throttler = Throttler(rate_limit=100, period=15)
+    throttler = Throttler(rate_limit=500, period=15)
     async with aiohttp.ClientSession() as session:
         for c in urls:
             tasks.append(get(throttler, session=session, site=c))
