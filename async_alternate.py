@@ -1,7 +1,6 @@
 import asyncio
 import aiohttp
 import csv
-import json
 from asyncio_throttle import Throttler
 
 def parse(htmls):
@@ -26,7 +25,7 @@ def parse(htmls):
 
     data.insert(0, ['URL', 'Green Hosting', 'Bytes', 'Cleaner Than %', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
 
-    with open('csv\\database8000-8500.csv', "w", newline="") as f:
+    with open('csv\\databa12400-12500.csv', "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerows(data)
 
@@ -43,7 +42,7 @@ async def get(throttler, session: aiohttp.ClientSession, site: str):
 
 async def main(urls):
     tasks = []
-    throttler = Throttler(rate_limit=500, period=15)
+    throttler = Throttler(rate_limit=100, period=15)
     async with aiohttp.ClientSession() as session:
         for c in urls:
             tasks.append(get(throttler, session=session, site=c))
