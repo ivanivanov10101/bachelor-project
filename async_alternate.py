@@ -25,7 +25,7 @@ def parse(htmls):
 
     data.insert(0, ['URL', 'Green Hosting', 'Bytes', 'Cleaner Than %', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
 
-    with open('csv\\database37500-38000.csv', "w", newline="") as f:
+    with open('csv\\database39500-40000.csv', "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerows(data)
 
