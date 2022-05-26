@@ -25,7 +25,7 @@ def parse(htmls):
 
     data.insert(0, ['URL', 'Green Hosting', 'Bytes', 'Cleaner Than %', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
 
-    with open('csv\\database65400-65600.csv', "w", newline="") as f:
+    with open('csv\\topretest.csv', "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerows(data)
 
@@ -42,7 +42,7 @@ async def get(throttler, session: aiohttp.ClientSession, site: str):
 
 async def main(urls):
     tasks = []
-    throttler = Throttler(rate_limit=50, period=15)
+    throttler = Throttler(rate_limit=500, period=15)
     async with aiohttp.ClientSession() as session:
         for c in urls:
             tasks.append(get(throttler, session=session, site=c))
@@ -53,8 +53,8 @@ async def main(urls):
 
 if __name__ == '__main__':
     urls = []
-    with open('test_data.csv', newline='') as file:
+    with open('top1000.csv', newline='') as file:
         for row in csv.reader(file):
-            urls.append(row[0])
+            urls.append(row[1])
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     asyncio.run(main(urls))
