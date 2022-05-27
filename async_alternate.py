@@ -53,7 +53,7 @@ async def main(urls):
 
 if __name__ == '__main__':
     urls = []
-    with open('500.csv', newline='') as file:
+    with open('400.csv', newline='') as file:
         for row in csv.reader(file):
             urls.append(row[1])
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
