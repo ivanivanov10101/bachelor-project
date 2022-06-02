@@ -42,7 +42,7 @@ async def get(throttler, session: aiohttp.ClientSession, site: str):
 
 async def main(urls):
     tasks = []
-    throttler = Throttler(rate_limit=500, period=15)
+    throttler = Throttler(rate_limit=100, period=15)
     async with aiohttp.ClientSession() as session:
         for c in urls:
             tasks.append(get(throttler, session=session, site=c))
@@ -53,8 +53,8 @@ async def main(urls):
 
 if __name__ == '__main__':
     urls = []
-    with open('400.csv', newline='') as file:
+    with open('test_data.csv', newline='') as file:
         for row in csv.reader(file):
-            urls.append(row[1])
+            urls.append(row[0])
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     asyncio.run(main(urls))
