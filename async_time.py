@@ -23,7 +23,6 @@ async def main(urls):
         for c in urls:
             tasks.append(get(throttler, session=session, site=c))
         htmls = await asyncio.gather(*tasks, return_exceptions=True)
-        print(htmls)
         with open('csv\\time_data.csv', "w", newline="") as f:
             writer = csv.writer(f)
             for i in htmls:
@@ -33,7 +32,7 @@ async def main(urls):
 
 if __name__ == '__main__':
     urls = []
-    with open('main.csv', newline='') as file:
+    with open('test_data.csv', newline='') as file:
         for row in csv.reader(file):
             urls.append(row[1])
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
