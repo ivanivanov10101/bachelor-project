@@ -1,18 +1,3 @@
-# bachelor-project
- 
-This is a repository hosting code for my BSc Computer Science Project.
-
-It contains an ASYNC implementations for HTTP GET requests and a multi-file JSON to CSV converter.
-
-## Instructions:
-Simply run the async_alternate.py with a .csv that contains a single column with every row being a website.
-
-The script will do a HTTP 'GET' request to the API and awat a .json file which will be appended to a .csv file.
-
-The csv file is stored in the /csv folder.
-
-The data is then managed by CSV.ipynb
-
 # CO2 and websites: a quantitative study on environmental impact.
 This repository is a companion page for the following thesis:
 > Ivan Ivanov. 2022. CO2 and websites: a quantitative study on environmental impact.
@@ -20,7 +5,19 @@ This repository is a companion page for the following thesis:
 It contains all the material required for replicating the study, including: Python source code, `.ipynb` files, and gathered data.
 
 ## Quick start
-Here a documentation on how to use the replication material should be provided.
+Quick Links
+---------------
+
+* [Thesis](documentation/thesis.docx)
+* [HTTP GET Requests Code](src/get_requester.py)
+* [Python Notebook For Managing the Data and Generating Graphs](src/get_requester.py)
+
+## Dependencies
+This experiment uses several Python packages. To install them, use the following command:
+
+```bash
+$ python3 -m pip install -r requirements.txt
+```
 
 ### Getting started
 

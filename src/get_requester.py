@@ -2,8 +2,8 @@ import asyncio
 import aiohttp
 import csv
 from asyncio_throttle import Throttler
-
-def parse(htmls):
+# This is an asynchronous code that will get the JSON data from the API and parse it into a CSV file.
+def parse(htmls): # parse the JSON and write to CSV
     data = []
     for code in htmls:
         try:
@@ -25,7 +25,7 @@ def parse(htmls):
 
     data.insert(0, ['URL', 'Green Hosting', 'Bytes', 'Cleaner Than %', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
 
-    with open('csv\\topretest.csv', "w", newline="") as f:
+    with open('data\\csv\\set.csv', "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerows(data)
 
@@ -51,8 +51,8 @@ async def main(urls):
         return htmls
 
 
-if __name__ == '__main__':
-    urls = []
+if __name__ == '__main__': # Start the program and get the JSON data from the API.
+    urls = [] # The test_data.csv is a list of URLs sourced from the top-1m.csv file.
     with open('test_data.csv', newline='') as file:
         for row in csv.reader(file):
             urls.append(row[0])
