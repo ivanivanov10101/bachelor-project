@@ -17,7 +17,7 @@ The data is then managed by CSV.ipynb
 This repository is a companion page for the following thesis:
 > Ivan Ivanov. 2022. CO2 and websites: a quantitative study on environmental impact.
 
-It contains all the material required for replicating the study, including: the source code, ipynb files, and gathered data.
+It contains all the material required for replicating the study, including: Python source code, `.ipynb` files, and gathered data.
 
 ## Quick start
 Here a documentation on how to use the replication material should be provided.
