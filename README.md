@@ -14,7 +14,8 @@ Quick Links
 
 ## Dependencies
 To run this, you will need to have Python 3 installed. 
-Additionally, you will need to use a .ipynb notebook. To use it you can either download Anaconda Navigator or use VSCode and the Jupyter Notebook extension for it.
+Additionally, you will need to use a .ipynb notebook. 
+To use it you can either download Anaconda Navigator or use VSCode and the Jupyter Notebook extension for it.
 The project uses several Python packages. Those are:
 
 For the IPYNB:
@@ -38,10 +39,15 @@ csv
 asyncio_throttle
 ```
 
-To install them, use the following command:
+To install them, you can either use the following command:
 
 ```bash
 $ python3 -m pip install -r requirements.txt
+```
+Or install the ones you need manually with:
+
+```bash
+$ pip install "package"
 ```
 
 ### Getting started
