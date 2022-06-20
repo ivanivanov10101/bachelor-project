@@ -13,11 +13,24 @@ Quick Links
 * [Python Notebook For Managing the Data and Generating Graphs](src/get_requester.py)
 
 ## Dependencies
+
+To install them, you can either use the following command:
+
+```bash
+$ python3 -m pip install -r requirements.txt
+```
+Or install the ones you need manually with:
+
+```bash
+$ pip install yourpackagename
+```
+
+### Getting started
 To run this, you will need to have Python 3 installed. 
 Additionally, you will need to use a .ipynb notebook. 
 To use it you can either download Anaconda Navigator or use VSCode and the Jupyter Notebook extension for it.
-The project uses several Python packages. Those are:
 
+1. Install the needed dependencies.
 For the IPYNB:
 ```
 pandas
@@ -38,24 +51,10 @@ csv
 asyncio_throttle
 ```
 
-To install them, you can either use the following command:
-
-```bash
-$ python3 -m pip install -r requirements.txt
-```
-Or install the ones you need manually with:
-
-```bash
-$ pip install yourpackagename
-```
-
-### Getting started
-
-1. Install the needed dependencies.
-
 2. Open the `get_requester.py` and `notebook.ipynb.`
 
 3. Run the `.py` and `ipynb.`.
+
    Py: Run with either
    ```bash
    $ python3 get_requester.py
