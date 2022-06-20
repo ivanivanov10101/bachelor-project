@@ -12,9 +12,12 @@ Quick Links
 * [HTTP GET Requests Code](src/get_requester.py)
 * [Python Notebook For Managing the Data and Generating Graphs](src/get_requester.py)
 
-## Dependencies
+### Getting started
+To run this, you will need to have Python 3 installed. 
+Additionally, you will need to use a .ipynb notebook. 
+To use it you can either download Anaconda Navigator or use VSCode and the Jupyter Notebook extension for it.
 
-To install them, you can either use the following command:
+1. Install the needed dependencies. For that you can either use the following command:
 
 ```bash
 $ python3 -m pip install -r requirements.txt
@@ -25,13 +28,7 @@ Or install the ones you need manually with:
 $ pip install yourpackagename
 ```
 
-### Getting started
-To run this, you will need to have Python 3 installed. 
-Additionally, you will need to use a .ipynb notebook. 
-To use it you can either download Anaconda Navigator or use VSCode and the Jupyter Notebook extension for it.
-
-1. Install the needed dependencies.
-For the IPYNB:
+List of dependencies for the IPYNB:
 ```
 pandas
 numpy
@@ -43,7 +40,7 @@ os
 tld
 ```
 
-For the Python Code:
+List of dependencies for the Python Code:
 ```
 asyncio
 aiohttp
