@@ -14,7 +14,7 @@ Quick Links
 
 ### Getting started
 To run this, you will need to have Python 3 installed. 
-Additionally, you will need to use a .ipynb notebook. 
+Additionally, you will need to use a `.ipynb` notebook. 
 To use it you can either download Anaconda Navigator or use VSCode and the Jupyter Notebook extension for it.
 
 1. Install the needed dependencies. For that you can either use the following command:
@@ -50,17 +50,17 @@ asyncio_throttle
 
 2. Open the `get_requester.py` and `notebook.ipynb.`
 
-The python file is strictly used for collecting and parsing `JSON` data. All of the data has already been collected in `/data/csv/`.
+   The python file is strictly used for collecting and parsing `JSON` data. All of the data has already been collected in `/data/csv/`.
 
 3. Run the `.py` and `ipynb.`.
 
-   ### Py: Run with either
+   `Py`: Run with either
    ```bash
    $ python3 get_requester.py
    ```
    Or if you're using VSCode with `Ctrl + F5` or the `Run` button in the upper right corner.
 
-   ### IPYNB: Run with either VSCode or Anadonda Navigator.
+   `IPYNB`: Run with either VSCode or Anadonda Navigator.
 
 ## Repository Structure
 This is the root directory of the repository. The directory is structured as follows:
