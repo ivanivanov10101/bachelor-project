@@ -3,7 +3,7 @@ import aiohttp
 import csv
 from asyncio_throttle import Throttler
 # This is an asynchronous code that will get the JSON data from the API and parse it into a CSV file.
-def parse(htmls): # parse the JSON and write to CSV
+def parse(htmls): # parse the JSON and write each entry to the main CSV file.
     data = []
     for code in htmls:
         try:
@@ -25,12 +25,12 @@ def parse(htmls): # parse the JSON and write to CSV
 
     data.insert(0, ['URL', 'Green Hosting', 'Bytes', 'Cleaner Than %', 'Stats_Adjusted Bytes', 'Stats_Energy', 'Stats_CO2_Grid_Grams', 'Stats_CO2_Grid_Litres', 'Stats_CO2_Renewable_Grams', 'Stats_CO2_Renewable_Litres'])
 
-    with open('data\\csv\\set.csv', "w", newline="") as f:
+    with open('data\\csv\\main.csv', "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerows(data)
 
 
-async def get(throttler, session: aiohttp.ClientSession, site: str):
+async def get(throttler, session: aiohttp.ClientSession, site: str): # Gets the JSON data from the API.
     async with throttler:
         url = f"https://api.websitecarbon.com/site?url={site}/"
         print(f"Requesting: {site}")
@@ -42,8 +42,8 @@ async def get(throttler, session: aiohttp.ClientSession, site: str):
 
 async def main(urls):
     tasks = []
-    throttler = Throttler(rate_limit=100, period=15)
-    async with aiohttp.ClientSession() as session:
+    throttler = Throttler(rate_limit=100, period=15) # Throttles the outgoing requests to not overload the API.
+    async with aiohttp.ClientSession() as session: # Gets an url and appends it to a task list.
         for c in urls:
             tasks.append(get(throttler, session=session, site=c))
         htmls = await asyncio.gather(*tasks, return_exceptions=True)

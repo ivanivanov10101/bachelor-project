@@ -1,7 +1,6 @@
 pandas
 numpy
 matplotlib
-seaborn
 pathlib
 warnings
 re
