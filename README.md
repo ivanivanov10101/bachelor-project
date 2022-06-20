@@ -1,6 +1,6 @@
-# CO2 and websites: a quantitative study on environmental impact.
+# CO2 and The Internet: a quantitative study on environmental impact
 This repository is a companion page for the following thesis:
-> Ivan Ivanov. 2022. CO2 and websites: a quantitative study on environmental impact.
+> Ivan Ivanov. 2022. CO2 and The Internet: a quantitative study on environmental impact
 
 It contains all the material required for replicating the study, including: Python source code, `.ipynb` files, and gathered data.
 
