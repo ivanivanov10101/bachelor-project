@@ -66,21 +66,21 @@ asyncio_throttle
 This is the root directory of the repository. The directory is structured as follows:
 
     bachelor-project
-    ├── documentation
+    ├── documentation/
     │   └── thesis.docx # Main thesis deliverable.
-    ├── src
-    │   ├── data
-    │   │   ├── csv # Contains all of the collected websites in .csv format.
+    ├── src/
+    │   ├── data/
+    │   │   ├── csv/ # Contains all of the collected websites in .csv format.
     │   │   │   ├── database0-500.csv
     |   |   |   ...
-    │   │   ├── datasets # Contains datasets used in the making of this project.
+    │   │   ├── datasets/ # Contains datasets used in the making of this project.
     │   │   │   ├── main.csv
     │   │   │   ├── tables.xlsx
     │   │   │   ├── test_data.csv
     │   │   │   └── top-1m.csv
-    │   │   └── images
-    │   │       ├── graphs # Contains graphs used in the thesis.
-    │   │       └── other # Miscelanious images.
+    │   │   └── images/
+    │   │       ├── graphs/ # Contains graphs used in the thesis.
+    │   │       └── other/ # Miscelanious images.
     │   ├── charts.ipynb
     │   ├── get_requester.py # Python HTTP GET Requests Code.
     │   └── notebook.ipynb # Notebook used to modify the collected data.
