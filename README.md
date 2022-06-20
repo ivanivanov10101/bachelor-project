@@ -13,7 +13,32 @@ Quick Links
 * [Python Notebook For Managing the Data and Generating Graphs](src/get_requester.py)
 
 ## Dependencies
-This experiment uses several Python packages. To install them, use the following command:
+To run this, you will need to have Python 3 installed. 
+Additionally, you will need to use a .ipynb notebook. To use it you can either download Anaconda Navigator or use VSCode and the Jupyter Notebook extension for it.
+The project uses several Python packages. Those are:
+
+For the IPYNB:
+```
+pandas
+numpy
+matplotlib
+seaborn
+pathlib
+warnings
+re
+os
+tld
+```
+
+For the Python Code:
+```
+asyncio
+aiohttp
+csv
+asyncio_throttle
+```
+
+To install them, use the following command:
 
 ```bash
 $ python3 -m pip install -r requirements.txt
