@@ -50,7 +50,7 @@ asyncio_throttle
 
 2. Open the `get_requester.py` and `notebook.ipynb.`
 
-   The python file is strictly used for collecting and parsing `JSON` data. All of the data has already been collected in `/data/csv/`.
+   The python file is strictly used for collecting and parsing `JSON` data. All of the data has already been collected in `/data/csv/`. The notebook is only used for data wrangling and generating graphs.
 
 3. Run the `.py` and `ipynb.`.
 
