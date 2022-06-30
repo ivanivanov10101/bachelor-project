@@ -4,7 +4,6 @@ This repository is a companion page for the following thesis:
 
 It contains all the material required for replicating the study, including: Python source code, `.ipynb` files, and gathered data.
 
-## Quick start
 Quick Links
 ---------------
 
@@ -74,14 +73,12 @@ This is the root directory of the repository. The directory is structured as fol
     │   │   │   ├── database0-500.csv
     |   |   |   ...
     │   │   ├── datasets/ # Contains datasets used in the making of this project.
-    │   │   │   ├── main.csv
-    │   │   │   ├── tables.xlsx
-    │   │   │   ├── test_data.csv
-    │   │   │   └── top-1m.csv
+    │   │   │   ├── main.csv # Main dataset.
+    │   │   │   ├── test_data.csv # A slice used with get_requester.py.
+    │   │   │   └── top-1m.csv # The Tranco list, unmodified.
     │   │   └── images/
     │   │       ├── graphs/ # Contains graphs used in the thesis.
     │   │       └── other/ # Miscelanious images.
-    │   ├── charts.ipynb
     │   ├── get_requester.py # Python HTTP GET Requests Code.
     │   └── notebook.ipynb # Notebook used to modify the collected data.
     ├── .gitattributes
