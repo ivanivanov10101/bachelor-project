@@ -1,13 +1,13 @@
-# CO2 and The Internet: a quantitative study on environmental impact
+# CO2 and The Internet: a quantitative study on the environmental impact of the top Web sites in the world
 This repository is a companion page for the following thesis:
-> Ivan Ivanov. 2022. CO2 and The Internet: a quantitative study on environmental impact
+> Ivan Ivanov. 2022. CO2 and The Internet: a quantitative study on the environmental impact of the top Web sites in the world
 
 It contains all the material required for replicating the study, including: Python source code, `.ipynb` files, and gathered data.
 
 Quick Links
 ---------------
 
-* [Thesis](documentation/thesis.docx)
+* [Thesis](documentation/FINAL_THESIS.pdf)
 * [HTTP GET Requests Code](src/get_requester.py)
 * [Python Notebook For Managing the Data and Generating Graphs](src/get_requester.py)
 
@@ -66,7 +66,9 @@ This is the root directory of the repository. The directory is structured as fol
 
     bachelor-project
     ├── documentation/
-    │   └── thesis.docx # Main thesis deliverable.
+    │   ├── first_draft.docx # The first draft, submitted on 30/06/2022.
+    |   ├── FINAL_THESIS.docx # Final version, with comments.
+    │   └── FINAL_THESIS.pdf # Final deliverable.
     ├── src/
     │   ├── data/
     │   │   ├── csv/ # Contains all of the collected websites in .csv format.
@@ -75,6 +77,7 @@ This is the root directory of the repository. The directory is structured as fol
     │   │   ├── datasets/ # Contains datasets used in the making of this project.
     │   │   │   ├── main.csv # Main dataset.
     │   │   │   ├── test_data.csv # A slice used with get_requester.py.
+    │   │   │   ├── tld.xlsx # A top-level domain table spreadsheet in the appendices.
     │   │   │   └── top-1m.csv # The Tranco list, unmodified.
     │   │   └── images/
     │   │       ├── graphs/ # Contains graphs used in the thesis.
