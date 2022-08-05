@@ -7,6 +7,7 @@ It contains all the material required for replicating the study, including: Pyth
 Quick Links
 ---------------
 
+* [Blog post about this study](https://s2group.cs.vu.nl/2022-08-04-web-emissions)
 * [Thesis](documentation/FINAL_THESIS.pdf)
 * [HTTP GET Requests Code](src/get_requester.py)
 * [Python Notebook For Managing the Data and Generating Graphs](src/get_requester.py)
